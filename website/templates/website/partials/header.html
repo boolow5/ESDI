@@ -1,0 +1,29 @@
+{% load staticfiles %}
+{% block header %}
+<div id="header-wrapper">
+	<div class="container">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<!-- Logo -->
+						<h1><a href="index.html" id="logo">ZeroFour</a></h1>
+
+					<!-- Nav -->
+          <nav id="nav">
+            <ul>
+              <li{% if page.name == "Home" %} class="current_page_item"{% endif %}><a href="/">Home</a></li>
+              <li{% if page.name == "Services" %} class="current_page_item"{% endif %}><a href="/services">Services</a></li>
+              <li{% if page.name == "Consultants" %} class="current_page_item"{% endif %}><a href="/consultants">Consultants</a></li>
+              <li{% if page.name == "Clients" %} class="current_page_item"{% endif %}><a href="/clients">Clients</a></li>
+              <li{% if page.name == "Contacts" %} class="current_page_item"{% endif %}><a href="/contacts">Contact us</a></li>
+            </ul>
+          </nav>
+
+				</div>
+			</header>
+
+	</div>
+</div>
+{% endblock %}

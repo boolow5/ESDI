@@ -1,0 +1,42 @@
+{% extends 'website/layout.html' %}
+{% load staticfiles %}
+{% load markdown_deux_tags %}
+{% block content %}
+<div class="wrapper style2">
+		<div class="inner">
+			<div class="container">
+				<div class="row">
+					<div class="4u 12u(mobile)">
+						<div id="sidebar">
+
+							<!-- Sidebar -->
+
+								{% include "website/partials/sidebar.html" %}
+
+
+						</div>
+					</div>
+					<div class="8u 12u(mobile) important(mobile)">
+						<div id="content">
+
+							<!-- Content -->
+
+								<article class="error">
+									<header class="major">
+										<h2>{{error.message}}</h2>
+										<p>{{error.description}}</p>
+									</header>
+								</article>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper style3">
+		<div class="inner">
+			<!-- COPY FROM INDEX -->
+		</div>
+	</div>
+{% endblock %}

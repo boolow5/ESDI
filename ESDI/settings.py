@@ -25,7 +25,10 @@ SECRET_KEY = '9z6e_maz4u&3&+8b9)#!xt+txwyiy%!oy%uobahq7o(em#9u65'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ADMINS = [('Mahdi Bolow', 'boolow5@gmail.com'),]
+
+
+ALLOWED_HOSTS = ["127.0.0.1",'localhost']
 
 
 # Application definition
@@ -38,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'markdown_deux',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -120,3 +124,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+######################################################
+# MARKDOWN SETTINGS STARTS HERE
+######################################################
+from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
+
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": {
+            "code-friendly": None,
+        },
+        "safe_mode": "escape",
+    },
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'ESDI <boolow5@gmail.org>'

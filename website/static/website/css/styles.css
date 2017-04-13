@@ -1,0 +1,72 @@
+.consultant-card-small {
+	padding: .3em;
+	box-shadow: 0 0 3px #888;
+	margin-top: 0.5em;
+}
+.card-header-small {
+	min-height: 15em;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	margin-top: 0;
+}
+
+.card-header-small .name {
+	position: relative;
+	color: #fff;
+	text-shadow: 0 0 3px #000;
+	padding-left: .3em;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-header-small .title {
+	bottom: 0;
+	position: absolute;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	font-weight: bolder;
+	padding-left: .3em;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* big */
+.consultant-card-big {
+	padding: .3em;
+	box-shadow: 0 0 3px #888;
+	margin-top: 0.5em;
+}
+.card-header-big {
+	min-height: 25em;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	margin-top: 0;
+}
+
+.card-header-big .name {
+	position: relative;
+	color: #fff;
+	text-shadow: 0 0 3px #000;
+	padding-left: .3em;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.card-header-big .title {
+	bottom: 0;
+	position: absolute;
+	color: #fff;
+	text-shadow: 0 0 2px #000;
+	font-weight: bolder;
+	padding-left: .3em;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+article.error h2 {
+	color: red;
+}
+
+.profile-page-content ul {
+	list-style: disc;
+	list-style-type: disc;
+}

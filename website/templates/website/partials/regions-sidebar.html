@@ -1,0 +1,10 @@
+<h1>Regions We Operate:</h1>
+
+{% for item in Countries %}
+<div class="consultant-card-small">
+	<div class="card-header-small" style="background-image:url(media/{{item.photo}})">
+		<h3 class="name">{{item.name}}</h3>
+		<span class="title">{{item.short_description}}</span>
+	</div>
+</div>
+{% endfor %}
