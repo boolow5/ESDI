@@ -1,2 +1,5 @@
 *.sqlite3
 media/*
+__*
+db.sqlite3
+*.pyc
