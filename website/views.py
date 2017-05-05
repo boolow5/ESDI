@@ -90,12 +90,16 @@ def getAllItems():
         esdi = PageSection.objects.get(name="esdi")
     except:pass
     items["ESDI"] = esdi
+    address = PageSection()
     try:
-        items["address"] = PageSection.objects.get(name="address")
+        address = PageSection.objects.get(name="address")
     except: pass
+    items["address"] = address
+    phones = PageSection()
     try:
-        items["phones"] = PageSection.objects.get(name="phones")
-    except:pass 
+        phones = PageSection.objects.get(name="phones")
+    except:pass
+    items["phones"] = phones 
     return items
 
 def getFeaturedSections():
