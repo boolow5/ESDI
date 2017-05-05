@@ -45,9 +45,22 @@ class Organization(models.Model):
     def __str__(self):
         return self.name +": "+self.short_description
 
-class Region(models.Model):
-    """Region are places ESDI operates"""
+class Country(models.Model):
+    """Country are places ESDI operates"""
     name = models.CharField(max_length=120)
     photo = models.ForeignKey(Image)
     short_description = models.TextField(max_length=300)
     long_description = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return self.name
+
+class PageSection(models.Model):
+    """PageSection is a small section of a page."""
+    name = models.CharField(max_length=120)
+    photo = models.ForeignKey(Image, blank=True, null=True)
+    short_description = models.TextField(max_length=300)
+    long_description = models.TextField(max_length=1000)
+
+    def __str__(self):
+        return self.name + " section"
