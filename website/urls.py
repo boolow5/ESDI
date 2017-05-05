@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
                url(r'^$', views.index, name='index'),
-               url(r'^(?P<page>[A-Za-z0-9.-]+)$', views.pages, name='pages'),
+               url(r'^(?P<page>[A-Za-z0-9.-]+)/page$', views.pages, name='pages'),
                url(r'^profile/(?P<shortname>[A-Za-z0-9.-]+)$', views.profiles, name='profiles'),
 ]
 

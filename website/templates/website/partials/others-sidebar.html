@@ -1,12 +1,14 @@
-<h1>ESDI {{page.name}}</h1>
+<h1><hr>ESDI {{page.name}}<hr></h1>
 
 {% for item in SidebarItems %}
 <a href="{% if item.shortname %}/profile/{{item.shortname}}{% else %}#{% endif %}">
 	<div class="consultant-card-small">
-		<div class="card-header-small" style="background-image:url(media/{{item.photo}})">
+		<div class="card-header-small" style="background-image:url(/media/{{item.photo}})">
 			<h3 class="name">{{item.name}}</h3>
 			<span class="title">{{item.short_description}}</span>
 		</div>
 	</div>
 </a>
 {% endfor %}
+<br>
+<br>
