@@ -148,3 +148,19 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 DEFAULT_FROM_EMAIL = 'ESDI <boolow5@gmail.org>'
+
+######################################################
+# MARKDOWN SETTINGS STARTS HERE
+######################################################
+from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
+
+MARKDOWN_DEUX_STYLES = {
+    "default": {
+        "extras": {
+            "code-friendly": None,
+        },
+        "safe_mode": "escape",
+    },
+}
+# MARKDOWN SETTINGS END HERE
+#######################################################
