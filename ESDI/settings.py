@@ -152,15 +152,54 @@ DEFAULT_FROM_EMAIL = 'ESDI <boolow5@gmail.org>'
 ######################################################
 # MARKDOWN SETTINGS STARTS HERE
 ######################################################
+# from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
+#
+# MARKDOWN_DEUX_STYLES = {
+#     "default": {
+#         "extras": {
+#             "code-friendly": None,
+#         },
+#         "safe_mode": False, #"escape",
+#     },
+# }
 from markdown_deux.conf.settings import MARKDOWN_DEUX_DEFAULT_STYLE
-
+import re
 MARKDOWN_DEUX_STYLES = {
-    "default": {
+    "default": MARKDOWN_DEUX_DEFAULT_STYLE,
+    "trusted": {
+        "extras": {
+            "code-friendly": None,
+        },
+        # Allow raw HTML (WARNING: don't use this for user-generated
+        # Markdown for your site!).
+        "safe_mode": False,
+    },
+    # Here is what http://code.activestate.com/recipes/ currently uses.
+    "recipe": {
         "extras": {
             "code-friendly": None,
         },
         "safe_mode": "escape",
-    },
+        "link_patterns": [
+            # Transform "Recipe 123" in a link.
+            (re.compile(r"recipe\s+#?(\d+)\b", re.I),
+             r"http://code.activestate.com/recipes/\1/"),
+        ],
+        "extras": {
+            "code-friendly": None,
+            "pyshell": None,
+            "demote-headers": 3,
+            "link-patterns": None,
+            # `class` attribute put on `pre` tags to enable using
+            # <http://code.google.com/p/google-code-prettify/> for syntax
+            # highlighting.
+            "html-classes": {"pre": "prettyprint"},
+            "cuddled-lists": None,
+            "footnotes": None,
+            "header-ids": None,
+        },
+        "safe_mode": "escape",
+    }
 }
 # MARKDOWN SETTINGS END HERE
 #######################################################
