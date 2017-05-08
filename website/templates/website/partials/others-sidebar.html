@@ -1,5 +1,6 @@
+{% if SidebarItems %}
 <h1><hr>ESDI {{page.name}}<hr></h1>
-
+{% endif %}
 {% for item in SidebarItems %}
 <a href="{% if item.shortname %}/profile/{{item.shortname}}{% else %}#{% endif %}">
 	<div class="consultant-card-small">
